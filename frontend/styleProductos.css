@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');*/
 
 :root{
     --orange: #ff7800;
@@ -14,7 +14,8 @@
 
 *{
     font-family: 'Poppins', sans-serif;
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
@@ -28,7 +29,7 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
+    scroll-padding-top: 0;
 }
 
 
@@ -48,12 +49,10 @@ section{
 .heading{
     text-align: center;
     padding: 2rem 0;
-    padding-bottom: 3rem;
+    /*padding-bottom: 3rem;*/
     font-size: 3.5rem;
     color: var(--black);
 }
-
-
 
 .heading span{
     background: var(--orange);
@@ -293,41 +292,7 @@ section{
 
 
 
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(img/frutas-y-verduras.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 17rem;
-    padding-bottom: 10rem;
-}
-
-.home .content{
-    text-align: center;
-    width: 60rem;
-}
-
-.home .content h3{
-    color: var(--black);
-    font-size: 3rem;
-}
-
-.home .content h3 span{
-    color: var(--orange);
-}
-
-.home .content p{
-    color: var(--light-color);
-    font-size: 1.7rem;
-    padding: 1rem 0;
-    line-height: 1.8;
-}
-
-
-
-.features .box-container{
+/*.features .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
@@ -363,22 +328,14 @@ section{
     line-height: 1.8;
     color: var(--light-color);
     padding: 1rem 0;
-}
+}*/
 
-
-
-.products .product-slider{
-    padding: 1rem;
-}
 
 .products{
-    display: none;
-    right: 2rem;
-    transition: .4s linear;
-}
-
-.products.active{
+    margin-top: 100px;
     display: block;
+    /*right: 2rem;*/
+    transition: .4s linear;
 }
 
 .products .product-slider:first-child{
@@ -419,186 +376,6 @@ section{
 .products .product-slider .box .stars i{
     font-size: 1.7rem;
     color: var(--orange);
-    padding: .5rem 0;
-}
-
-
-
-.categories{
-    display: none;
-    right: 2rem;
-    transition: .4s linear;
-}
-
-.categories.active{
-    display: block;
-}
-
-.categories .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    gap: 1.5rem;
-}
-
-.categories .box-container .box{
-    padding: 3rem 2rem;
-    border-radius: .5rem;
-    background: #fff;
-    box-shadow: var(--box-shadow);
-    outline: var(--outline);
-    outline-offset: -1rem;
-    text-align: center;
-}
-
-.categories .box-container .box:hover{
-    outline: var(--outline-hover);
-    outline-offset: 0rem;
-}
-
-.categories .box-container .box img{
-    margin: 1rem 0;
-    height: 15rem;
-}
-
-.categories .box-container .box h3{
-    font-size: 2rem;
-    color: var(--black);
-    line-height: 1.8;
-}
-
-.categories .box-container .box p{
-    font-size: 1.7rem;
-    color: var(--light-color);
-    line-height: 1.8;
-    padding: 1rem 0;
-}
-
-
-
-.review{
-    display: none;
-    right: 2rem;
-    transition: .4s linear;
-}
-
-.review.active{
-    display: block;
-}
-
-.review .review-slider{
-    padding: 1rem;
-}
-
-.review .review-slider .box{
-    background: #fff;
-    border-radius: .5rem;
-    text-align: center;
-    padding: 3rem 2rem;
-    outline-offset: -1rem;
-    outline: var(--outline);
-    box-shadow: var(--box-shadow);
-    transition: .2s linear;
-}    
-
-.review .review-slider .box:hover{
-    outline: var(--outline-hover);
-    outline-offset: 0rem;
-}
-
-.review .review-slider .box img{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-}
-
-.review .review-slider .box p{
-    padding: 1rem 0;
-    line-height: 1.8;
-    color: var(--light-color);
-    font-size: 1.5rem;
-}
-
-.review .review-slider .box h3{
-    padding-bottom: .5rem;
-    color: var(--black);
-    font-size: 2.2rem;
-}
-
-.review .review-slider .box .stars i{
-    color: var(--orange);
-    font-size: 1.7rem;
-}
-
-
-
-.blogs .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-}
-
-
-.blogs{
-    display: none;
-    right: 2rem;
-    transition: .4s linear;
-}
-
-.blogs.active{
-    display: block;
-}
-
-.blogs .box-container .box{
-    overflow: hidden;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    background: #fff;
-}
-
-.blogs .box-container .box img{
-    height: 25rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.blogs .box-container .box .content{
-    padding: 2rem;
-}
-
-.blogs .box-container .box .content .icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1rem;
-    border-bottom: var(--border);
-}
-
-.blogs .box-container .box .content .icons a{
-    color: var(--light-color);
-    font-size: 1.5rem;
-}
-
-.blogs .box-container .box .content .icons a:hover{
-    color: var(--black);
-}
-
-.blogs .box-container .box .content .icons a i{
-    color: var(--orange);
-    padding-right: .5rem;
-}
-
-.blogs .box-container .box .content h3{
-    line-height: 1.8;
-    color: var(--black);
-    font-size: 2.2rem;
-    padding: .5rem 0;
-}
-
-.blogs .box-container .box .content p{
-    line-height: 1.8;
-    color: var(--light-color);
-    font-size: 1.5rem;
     padding: .5rem 0;
 }
 
