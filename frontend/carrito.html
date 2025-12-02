@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Expres</title>
+
+    <!--<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styleCarritos.css">
+</head>
+<body>
+    <!--SECCION DEL HEADER-->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"> Super Expres </i></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#features">Caracteristicas</a>
+            <a href="productos.html">Productos</a>
+            <a href="#review/index.html">Categorias</a>
+            <a href="show-review">Reseñas</a>
+            <a href="show-blogs">Blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <!--<div class="fas fa-shopping-cart" id="cart-btn"></div>-->
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" class="box" placeholder="Buscar Productos...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="shopping-cart">
+            <span id="contador-carrito">0</span>
+            <!--<div class="box"></div>-->
+            <a href="carrito.html" class="btn">Ver carrito</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>Unete ahora</h3>
+            <input type="email" class="box" placeholder="your email...">
+            <input type="password" class="box" placeholder="your password...">
+            <p>¿Olvidaste tu contraseña? <a href="#">Click aquí</a></p>
+            <p>No tengo una cuenta<a href="#">Crear ahora</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+    </header>
+
+
+    <!--SECCION DE PRODUCTOS--> 
+<section class="products" id="products">
+    <h1 class="heading">Carrito de <span>compras</span></h1>
+    
+</section>
+
+<!--<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>-->
+
+<script src="scriptCarrito.js"></script>
+    
+</body>
+</html>

@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Expres</title>
 
-    <!--<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styleGeneral.css">
     <link rel="stylesheet" href="styleProductos.css">
+
 </head>
 <body>
     <!--SECCION DEL HEADER-->
@@ -18,7 +20,7 @@
             <a href="index.html">Home</a>
             <a href="#features">Caracteristicas</a>
             <a href="productos.html">Productos</a>
-            <a href="#categories">Categorias</a>
+            <a href="#review/index.html">Categorias</a>
             <a href="show-review">Reseñas</a>
             <a href="show-blogs">Blogs</a>
         </nav>
@@ -34,8 +36,11 @@
             <input type="search" id="search-box" class="box" placeholder="Buscar Productos...">
             <label for="search-box" class="fas fa-search"></label>
         </form>
+
         <div class="shopping-cart">
-            <div class="box"></div>
+            <span id="contador-carrito">0</span>
+            <!--<div class="box"></div>-->
+            <a href="carrito.html" class="btn ">Ver carrito</a>
         </div>
 
         <form action="" class="login-form">
@@ -51,7 +56,9 @@
 
     <!--SECCION DE PRODUCTOS--> 
 <section class="products" id="products">
-    <h1 class="heading">Nuestros<span>Productos</span></h1>
+
+    <!--FRUTAS-->
+    <h1 class="heading" id="productosTodos"><span>Frutas</span></h1>
     <div class="swiper product-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide box">
@@ -113,6 +120,377 @@
         </div>
     </div>
 
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="img/papa.jpg" alt="">
+                <h3>Papas</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/aguacate.jpg" alt="">
+                <h3>Aguacate</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/zanahoria.jpg" alt="">
+                <h3>Zanahoria</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/limon.avif" alt="">
+                <h3>Limon</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+            
+        </div>
+    </div>
+
+<!--VERDURAS-->
+    <h1 class="heading" id="productosTodos"><span>Verduras</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="img/naranja.jpg" alt="">
+                <h3>Naranja</h3>
+                <div class="price"> $20.50/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/cebolla-morada.jpg" alt="">
+                <h3>cebolla</h3>
+                <div class="price"> $30.50/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/carne_res.jpg" alt="">
+                <h3>carne de res</h3>
+                <div class="price"> $185.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/repollo.webp" alt="">
+                <h3>Col</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="img/papa.jpg" alt="">
+                <h3>Papas</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/aguacate.jpg" alt="">
+                <h3>Aguacate</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/zanahoria.jpg" alt="">
+                <h3>Zanahoria</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/limon.avif" alt="">
+                <h3>Limon</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+            
+        </div>
+    </div>
+
+<!--CARNES FRESCAS-->
+    <h1 class="heading" id="productosTodos">Carnes <span>frescas</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="img/naranja.jpg" alt="">
+                <h3>Naranja</h3>
+                <div class="price"> $20.50/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/cebolla-morada.jpg" alt="">
+                <h3>cebolla</h3>
+                <div class="price"> $30.50/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/carne_res.jpg" alt="">
+                <h3>carne de res</h3>
+                <div class="price"> $185.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/repollo.webp" alt="">
+                <h3>Col</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="img/papa.jpg" alt="">
+                <h3>Papas</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/aguacate.jpg" alt="">
+                <h3>Aguacate</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/zanahoria.jpg" alt="">
+                <h3>Zanahoria</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/limon.avif" alt="">
+                <h3>Limon</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+            
+        </div>
+    </div>
+
+<!--LACTEOS Y SALCHICHONERIA-->
+    <h1 class="heading" id="productosTodos">Lacteos y <span>salchichoneria</span></h1>
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="img/naranja.jpg" alt="">
+                <h3>Naranja</h3>
+                <div class="price"> $20.50/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/cebolla-morada.jpg" alt="">
+                <h3>cebolla</h3>
+                <div class="price"> $30.50/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/carne_res.jpg" alt="">
+                <h3>carne de res</h3>
+                <div class="price"> $185.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="img/repollo.webp" alt="">
+                <h3>Col</h3>
+                <div class="price"> $18.99/kg</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="" class="btn btn-cart">Agregar al carrito</a>
+            </div>
+
+        </div>
+    </div>
 
     <div class="swiper product-slider">
         <div class="swiper-wrapper">
@@ -176,9 +554,57 @@
     </div>
 </section>
 
-<!--<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>-->
+<!--SECCION DE FOOTER--> 
+<section class="footer">
 
-<script src="script.js"></script>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Super Expres <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, molestiae.</p>
+            <div class="share">
+                <a href="" class="fab fa-facebook"></a>
+                <a href="" class="fab fa-twitter"></a>
+                <a href="" class="fab fa-instagram"></a>
+                <a href="" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</i></h3>
+            <a href="#" class="links"><i class="fas fa-phone"></i>+52 229-016-2791</a>
+            <a href="#" class="links"><i class="fas fa-phone"></i>+52 229-716-6711</a>
+            <a href="#" class="links"><i class="fas fa-envelope"></i>super.expres@gmail.com</a>
+            <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>El Tejar, Veracruz, Mexico</a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</i></h3>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Features</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Products</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Categories</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>reviews</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>blogs</a>
+        </div>
+
+        <div class="box">
+            <h3>News Letter</i></h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn"><br>
+            <img src="img/metodos-pago.png" alt="" class="payment-img">
+        </div>
+
+    </div>
+
+    <div class="credit"> Create by <span>Super Expres</span> | all right reserved </div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="scriptProductos.js"></script>
+<script src="scriptGeneral.js"></script>
     
 </body>
 </html>

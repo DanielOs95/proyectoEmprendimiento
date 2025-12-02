@@ -7,14 +7,14 @@ document.querySelector('#search-btn').onclick = () => {
     navbar.classList.remove('active');
 }
 
-/*MOSTRAR Y OCULTAR CARRITO DE COMPRAS*/
+/*MOSTRAR Y OCULTAR CARRITO DE COMPRAS
 let shoppingCart = document.querySelector('.shopping-cart');
 document.querySelector('#cart-btn').onclick = () => {
     shoppingCart.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
-}
+}*/
 
 /*MOSTRAR Y OCULTAR REGISTRO DE USUARIOS*/
 let loginForm = document.querySelector('.login-form');
@@ -35,73 +35,13 @@ document.querySelector('#menu-btn').onclick = () => {
 }
 
 
-/*OCULTAR SI OTRA OPCION ESTA DESPLEGADO*/
-window.onscroll = () => {
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
-}
-
-
-
-let products = document.querySelector('.products');
-let categories = document.querySelector('.categories');
-let resenas = document.querySelector('.review');
-let blogs = document.querySelector('.blogs');
-
-
-
-/*SLIDER DE PRODUCTOS PANTALLA PRINCIPAL*/
-var swiper = new Swiper(".product-slider", {
-    loop: true,
-    spaceBetween: 20,
-    autoplay:{
-        delay: 7500,
-        disableOnInteraction: false,
-    },
-    breakpoints:{
-        0:{
-            slidesPerView: 1,
-           
-        },
-        768:{
-            slidesPerView: 2,
-            
-        },
-        1020:{
-            slidesPerView: 3,
-        },
-    },
-});
-
-
-/*SLIDER DE REVIEWS */
-var swiper = new Swiper(".review-slider", {
-    loop: true,
-    spaceBetween: 20,
-    autoplay:{
-        delay: 7000,
-        disableOnInteraction: false,
-    },
-    breakpoints:{
-        0:{
-            slidesPerView: 1,
-           
-        },
-        768:{
-            slidesPerView: 2,
-            
-        },
-        1020:{
-            slidesPerView: 3,
-        },
-    },
-});
-
-
-
+//AGREGAR PRODUCTOS AL CARRITO
 const cart = document.querySelector('.shopping-cart');
+
+const actualizarCarrito = () => {
+    const contador = cart.querySelectorAll('.box').length;
+    document.getElementById("contador-carrito").textContent = contador;
+};
 
 document.querySelectorAll('.btn-cart').forEach(button => {
     button.addEventListener('click', (e) => {
@@ -112,7 +52,7 @@ document.querySelectorAll('.btn-cart').forEach(button => {
         let imagen = cajaProducto.querySelector('img').src;
         let titulo = cajaProducto.querySelector('h3').innerText;
         let precio = cajaProducto.querySelector('.price').innerText;
-        
+
         let nuevoContenido = document.createElement('div');
         nuevoContenido.classList.add('box');
         nuevoContenido.innerHTML = `
@@ -124,15 +64,14 @@ document.querySelectorAll('.btn-cart').forEach(button => {
                     <span class="quantity"> 1</span>
                 </div>
         `;
+
         cart.appendChild(nuevoContenido);
-        
+        actualizarCarrito();
+
         nuevoContenido.querySelector('.fa-trash').addEventListener('click', () =>{
             nuevoContenido.remove();
-        });
+            actualizarCarrito();
+        })
         
     })
 });
-
-
-
-
