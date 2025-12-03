@@ -18,7 +18,7 @@
         <a href="#" class="logo"><i class="fas fa-shopping-basket"> Super Expres </i></a>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="#features">Caracteristicas</a>
+            <a href="index.html#features">Caracteristicas</a>
             <a href="productos.html">Productos</a>
             <a href="#review/index.html">Categorias</a>
             <a href="show-review">Reseñas</a>
@@ -28,7 +28,10 @@
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="cart-wrapper">
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <span id="contador-carrito">0</span>
+            </div>
             <div class="fas fa-user" id="login-btn"></div>
         </div>
 
@@ -38,8 +41,6 @@
         </form>
 
         <div class="shopping-cart">
-            <span id="contador-carrito">0</span>
-            <!--<div class="box"></div>-->
             <a href="carrito.html" class="btn ">Ver carrito</a>
         </div>
 
@@ -58,7 +59,7 @@
 <section class="products" id="products">
 
     <!--FRUTAS-->
-    <h1 class="heading" id="productosTodos"><span>Frutas</span></h1>
+    <h1 class="heading productosTodos" id="frutas"><span>Frutas</span></h1>
     <div class="swiper product-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide box">
@@ -182,7 +183,7 @@
     </div>
 
 <!--VERDURAS-->
-    <h1 class="heading" id="productosTodos"><span>Verduras</span></h1>
+    <h1 class="heading productosTodos" id="verduras"><span>Verduras</span></h1>
     <div class="swiper product-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide box">
@@ -306,7 +307,7 @@
     </div>
 
 <!--CARNES FRESCAS-->
-    <h1 class="heading" id="productosTodos">Carnes <span>frescas</span></h1>
+    <h1 class="heading productosTodos" id="carnes">Carnes <span>frescas</span></h1>
     <div class="swiper product-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide box">
@@ -430,7 +431,7 @@
     </div>
 
 <!--LACTEOS Y SALCHICHONERIA-->
-    <h1 class="heading" id="productosTodos">Lacteos y <span>salchichoneria</span></h1>
+    <h1 class="heading productosTodos" id="embutidos">Lacteos y <span>salchichoneria</span></h1>
     <div class="swiper product-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide box">

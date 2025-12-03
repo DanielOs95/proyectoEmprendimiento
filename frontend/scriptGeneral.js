@@ -47,9 +47,30 @@ window.onscroll = () => {
 //AGREGAR PRODUCTOS AL CARRITO
 const cart = document.querySelector('.shopping-cart');
 
+let carritoGeneral = JSON.parse(localStorage.getItem("carrito")) || [];
+
 const actualizarCarrito = () => {
     const contador = cart.querySelectorAll('.box').length;
     document.getElementById("contador-carrito").textContent = contador;
+};
+
+const guardarProductos = () => {
+    localStorage.setItem("carrito", JSON.stringify(carritoGeneral));
+}
+
+const mostrarMensaje = (textoMensaje) => {
+    const mensaje = document.createElement("div");
+    mensaje.textContent = textoMensaje;
+    mensaje.style.position = "fixed";
+    mensaje.style.top = "20px";
+    mensaje.style.right = "20px";
+    mensaje.style.background = "#717070ff";
+    mensaje.style.color = "#fff";
+    mensaje.style.padding = "10px 20px";
+    mensaje.style.borderRadius = "5px";
+    mensaje.style.zIndex = "9999";
+    document.body.appendChild(mensaje);
+    setTimeout(() => mensaje.remove(), 1200);
 };
 
 document.querySelectorAll('.btn-cart').forEach(button => {
@@ -61,6 +82,26 @@ document.querySelectorAll('.btn-cart').forEach(button => {
         let imagen = cajaProducto.querySelector('img').src;
         let titulo = cajaProducto.querySelector('h3').innerText;
         let precio = cajaProducto.querySelector('.price').innerText;
+
+        let existeONo = carritoGeneral.some(p => p.titulo === titulo);
+        /*cart.querySelectorAll('.box h3').forEach(h3 => {
+            if (h3.innerText === titulo) {
+                existeONo = true;
+            }
+        });*/
+
+        if (existeONo) {
+            mostrarMensaje("❌ Este producto ya fue agregado");
+            return;
+        };
+
+        carritoGeneral.push({
+            imagen,
+            titulo,
+            precio,
+            cantidad: 1
+        });
+        guardarProductos();
 
         let nuevoContenido = document.createElement('div');
         nuevoContenido.classList.add('box');
@@ -75,10 +116,13 @@ document.querySelectorAll('.btn-cart').forEach(button => {
         `;
 
         cart.appendChild(nuevoContenido);
+        mostrarMensaje("✔ Producto agregado");
         actualizarCarrito();
 
         nuevoContenido.querySelector('.fa-trash').addEventListener('click', () =>{
             nuevoContenido.remove();
+            carritoGeneral = carritoGeneral.filter(p => p.titulo !== titulo);
+            guardarProductos();
             actualizarCarrito();
         })
         
