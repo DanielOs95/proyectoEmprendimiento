@@ -16,14 +16,14 @@ document.querySelector('#cart-btn').onclick = () => {
     navbar.classList.remove('active');
 }*/
 
-/*MOSTRAR Y OCULTAR REGISTRO DE USUARIOS*/
+/*MOSTRAR Y OCULTAR REGISTRO DE USUARIOS
 let loginForm = document.querySelector('.login-form');
 document.querySelector('#login-btn').onclick = () => {
     loginForm.classList.toggle('active');
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
-}
+}*/
 
 /*MOSTRAR Y OCULTAR MENU HAMBURGUESA*/
 let navbar = document.querySelector('.navbar');
@@ -35,43 +35,72 @@ document.querySelector('#menu-btn').onclick = () => {
 }
 
 
-//AGREGAR PRODUCTOS AL CARRITO
-const cart = document.querySelector('.shopping-cart');
+/*OCULTAR SI OTRA OPCION ESTA DESPLEGADO*/
+window.onscroll = () => {
+    searchForm.classList.remove('active');
+    shoppingCart.classList.remove('active');
+    loginForm.classList.remove('active');
+    navbar.classList.remove('active');
+}
 
-const actualizarCarrito = () => {
-    const contador = cart.querySelectorAll('.box').length;
-    document.getElementById("contador-carrito").textContent = contador;
+
+
+let general = JSON.parse(localStorage.getItem('carrito')) || [];
+const contenedor = document.getElementById('contenedor-carrito');
+
+const productosGuardados = () => {
+    localStorage.setItem("carrito", JSON.stringify(general));
+}
+
+
+const mostrarProductos = () => {
+    contenedor.innerHTML = "";
+    
+    
+    general.forEach(producto => {
+        const productoMostrar = document.createElement("div");
+        productoMostrar.className = "contenedorCarrito";
+
+         productoMostrar.innerHTML = `
+                <img src="${producto.imagen}" alt="">
+                <div class="contenido">
+                    <h3>${producto.titulo}</h3>
+                    <span class="price">${producto.precio}</span>
+                    
+                    <div id="contenedor">
+                        <button class="sumar"> + </button>
+                        <span class="cantidad">${producto.cantidad}</span>
+                        <button class="restar"> - </button>
+                    </div>
+                </div>
+                <i class="fas fa-trash borrar"></i>
+        `;
+        productoMostrar.querySelector(".sumar").addEventListener("click", () => {
+            producto.cantidad++;
+            productosGuardados();
+            mostrarProductos();
+        });
+
+        productoMostrar.querySelector(".restar").addEventListener("click", () => {
+            if (producto.cantidad > 1) {
+                producto.cantidad --;
+            } else {
+                general = general.filter(p => p.titulo !== producto.titulo);
+            }
+            productosGuardados();
+            mostrarProductos();
+        });
+
+        productoMostrar.querySelector(".borrar").addEventListener("click", () => {
+            general = general.filter(p => p.titulo !== producto.titulo);
+            
+            productosGuardados();
+            mostrarProductos();
+        });
+        contenedor.appendChild(productoMostrar);
+    }); 
+
 };
 
-document.querySelectorAll('.btn-cart').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
+mostrarProductos();
 
-        let cajaProducto = button.closest('.box')
-
-        let imagen = cajaProducto.querySelector('img').src;
-        let titulo = cajaProducto.querySelector('h3').innerText;
-        let precio = cajaProducto.querySelector('.price').innerText;
-
-        let nuevoContenido = document.createElement('div');
-        nuevoContenido.classList.add('box');
-        nuevoContenido.innerHTML = `
-                <i class="fas fa-trash"></i>
-                <img src="${imagen}" alt="">
-                <div class="content">
-                    <h3>${titulo}</h3>
-                    <span class="price">${precio}</span>
-                    <span class="quantity"> 1</span>
-                </div>
-        `;
-
-        cart.appendChild(nuevoContenido);
-        actualizarCarrito();
-
-        nuevoContenido.querySelector('.fa-trash').addEventListener('click', () =>{
-            nuevoContenido.remove();
-            actualizarCarrito();
-        })
-        
-    })
-});

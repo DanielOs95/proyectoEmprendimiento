@@ -8,6 +8,7 @@
     <!--<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styleGeneral.css">
     <link rel="stylesheet" href="styleCarritos.css">
 </head>
 <body>
@@ -26,8 +27,8 @@
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
-            <!--<div class="fas fa-shopping-cart" id="cart-btn"></div>-->
-            <div class="fas fa-user" id="login-btn"></div>
+            <!--<div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>-->
         </div>
 
         <form action="" class="search-form">
@@ -51,14 +52,63 @@
     </header>
 
 
-    <!--SECCION DE PRODUCTOS--> 
-<section class="products" id="products">
+    <!--SECCION DE CARRITO--> 
+<section id="carrito">
     <h1 class="heading">Carrito de <span>compras</span></h1>
-    
+    <div id="contenedor-carrito">
+    </div>
 </section>
 
-<!--<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>-->
 
+<!--SECCION DE FOOTER--> 
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Super Expres <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, molestiae.</p>
+            <div class="share">
+                <a href="" class="fab fa-facebook"></a>
+                <a href="" class="fab fa-twitter"></a>
+                <a href="" class="fab fa-instagram"></a>
+                <a href="" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</i></h3>
+            <a href="#" class="links"><i class="fas fa-phone"></i>+52 229-016-2791</a>
+            <a href="#" class="links"><i class="fas fa-phone"></i>+52 229-716-6711</a>
+            <a href="#" class="links"><i class="fas fa-envelope"></i>super.expres@gmail.com</a>
+            <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>El Tejar, Veracruz, Mexico</a>
+        </div>
+
+        <!--<div class="box">
+            <h3>Quick Links</i></h3>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Features</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Products</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>Categories</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>reviews</a>
+            <a href="#" class="links"><i class="fas fa-arrow-right"></i>blogs</a>
+        </div>-->
+
+        <div class="box">
+            <h3>News Letter</i></h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn"><br>
+            <img src="img/metodos-pago.png" alt="" class="payment-img">
+        </div>
+
+    </div>
+
+    <div class="credit"> Create by <span>Super Expres</span> | all right reserved </div>
+</section>
+
+
+<!--<script src="scriptGeneral.js"></script>-->
 <script src="scriptCarrito.js"></script>
     
 </body>
