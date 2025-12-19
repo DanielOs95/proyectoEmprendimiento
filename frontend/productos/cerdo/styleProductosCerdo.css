@@ -33,7 +33,10 @@
 }
 
 .products .product-slider .box img{
+    width: 100%;
     height: 20rem;
+    object-fit: contain;
+    display: block;
 }
 
 .products .product-slider .box h3{

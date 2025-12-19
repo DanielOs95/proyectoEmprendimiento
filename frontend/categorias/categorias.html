@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Expres</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="styleCategorias.css">
+    <link rel="stylesheet" href="/frontend/general/styleGeneral.css">
+    
+
+</head>
+<body>
+    <!--SECCION DEL HEADER-->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"> Super Expres </i></a>
+        <nav class="navbar">
+            <a href="/frontend/index.html">Home</a>
+            <a href="/frontend/index.html#features">Caracteristicas</a>
+            <a href="/frontend/productos/productos.html">Productos</a>
+            <!--<a href="#categories">Categorias</a>-->
+            <a href="/frontend/index.html#review">Reseñas</a>
+            <a href="show-blogs">Negocios de comida</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <!--<div class="cart-wrapper">
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <span id="contador-carrito">0</span>
+            </div>-->
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" class="box" placeholder="Buscar Productos...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="shopping-cart">
+            <!--<div class="box"></div>-->
+            <a href="carrito/carrito.html" class="btn ">Ver carrito</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>Unete ahora</h3>
+            <input type="email" class="box" placeholder="your email...">
+            <input type="password" class="box" placeholder="your password...">
+            <p>¿Olvidaste tu contraseña? <a href="#">Click aquí</a></p>
+            <p>No tengo una cuenta<a href="#">Crear ahora</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+    </header>
+
+<!--SECCION DE CATEGORIAS--> 
+<section class="categories" id="categories">
+    <h1 class="heading">Todas las<span>categorias</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="/frontend/img/img_home/vegetales-2.jpg" alt="" loading="lazy">
+            <h3>Verduras</h3>
+            <p>Calidad garantizada</p>
+            <a href="/frontend/productos/verduras/productosVerduras.html" class="btn">Comprar ahora</a>
+        </div>
+
+        <div class="box">
+            <img src="/frontend/img/img_home/fruta_fresca.png" alt="" loading="lazy">
+            <h3>Frutas </h3>
+            <p>Calidad garantizada</p>
+            <a href="/frontend/productos/frutas/frutas.html" class="btn">Comprar ahora</a>
+        </div>
+
+        <div class="box">
+            <img src="/frontend/img/salchichoneria/embutidos.png" alt="" loading="lazy">
+            <h3>Salchichoneria</h3>
+            <p>100% fresco y natural</p>
+            <a href="/frontend/productos/salchichoneria/productosEmbutidos.html" class="btn">Comprar ahora</a>
+        </div>
+
+        <div class="box">
+            <img src="/frontend/img/carne_res/carne_de_res.png" alt="" loading="lazy">
+            <h3>Carne de res</h3>
+            <p>100% fresco y natural</p>
+            <a href="/frontend/productos/res/productosRes.html" class="btn">Comprar ahora</a>
+        </div>
+
+        <div class="box">
+            <img src="/frontend/img/carne_cerdo/carne_de_cerdo.jpg" alt="" loading="lazy">
+            <h3>Carne de cerdo</h3>
+            <p>100% fresco y natural</p>
+            <a href="/frontend/productos/cerdo/productosCerdo.html" class="btn">Comprar ahora</a>
+        </div>
+
+        <div class="box">
+            <img src="/frontend/img/pollo/pollo-categoria2.jpg" alt="" loading="lazy">
+            <h3>Pollo</h3>
+            <p>100% fresco y natural</p>
+            <a href="/frontend/productos/pollo/productosPollo.html" class="btn">Comprar ahora</a>
+        </div> 
+
+        <div class="box">
+            <img src="/frontend/img/mariscos/pes-categoria.webp" alt="" loading="lazy">
+            <h3>Pescados y marisco</h3>
+            <p>100% fresco y natural</p>
+            <a href="/frontend/productos/mariscos/productosMariscos.html" class="btn">Comprar ahora</a>
+        </div>
+
+        <div class="box">
+            <img src="/frontend/img/chiles_semillas_secos/chiles-secos.jpg" alt="" loading="lazy">
+            <h3>Chiles secos y semillas</h3>
+            <p>100% fresco y natural</p>
+            <a href="/frontend/productos/semillas_chiles_secos/productoSecos.html" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!--SECCION DE FOOTER--> 
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Super Expres <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, molestiae.</p>
+            <div class="share">
+                <a href="" class="fab fa-facebook"></a>
+                <a href="" class="fab fa-twitter"></a>
+                <a href="" class="fab fa-instagram"></a>
+                <a href="" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</i></h3>
+            <a href="#" class="links"><i class="fas fa-phone"></i>+52 229-016-2791</a>
+            <a href="#" class="links"><i class="fas fa-phone"></i>+52 229-716-6711</a>
+            <a href="#" class="links"><i class="fas fa-envelope"></i>super.expres@gmail.com</a>
+            <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>El Tejar, Veracruz, Mexico</a>
+        </div>
+
+        <div class="box">
+            <h3>News Letter</i></h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn"><br>
+            <img src="img/metodos-pago.png" alt="" class="payment-img">
+        </div>
+
+    </div>
+
+    <div class="credit"> Create by <span>Super Expres</span> | all right reserved </div>
+</section>
+
+<!--<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>-->
+
+<script src="scriptCategorias.js"></script>
+<!--<script src="/frontend/general/scriptGeneral.js"></script>-->
+
+</body>
+</html>

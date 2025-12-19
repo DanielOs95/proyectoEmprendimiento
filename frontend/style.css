@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(img/frutas-y-verduras.jpg) no-repeat;
+    background: url(img/img_home/frutas-y-verduras.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 17rem;
@@ -53,8 +53,11 @@
 }
 
 .features .box-container .box img{
+    width: 100%;
     margin: 1rem 0;
     height: 15rem;
+    object-fit: contain;
+    display: block;
 }
 
 .features .box-container .box h3{
@@ -107,7 +110,10 @@
 }
 
 .products .product-slider .box img{
+    width: 100%;
     height: 20rem;
+    object-fit: contain;
+    display: block;
 }
 
 .products .product-slider .box h3{
@@ -162,7 +168,10 @@
 
 .categories .box-container .box img{
     margin: 1rem 0;
-    height: 15rem;
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+    display: block;
 }
 
 .categories .box-container .box h3{
@@ -213,6 +222,7 @@
 .review .review-slider .box img{
     height: 10rem;
     width: 10rem;
+    object-fit: cover;
     border-radius: 50%;
 }
 

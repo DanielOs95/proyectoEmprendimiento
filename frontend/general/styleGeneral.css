@@ -315,9 +315,6 @@ section{
 }
 
 
-
-
-
 .footer{
     background: #fff;
 }
@@ -403,10 +400,6 @@ section{
     color: var(--black);
     border-top: var(--border);
 }
-
-
-
-
 
 
 @media (max-width:991px){
