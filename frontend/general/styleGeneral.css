@@ -203,7 +203,11 @@ section{
 }
 
 .header .shopping-cart .box img{
-    height: 10rem;
+    width: 100%;
+    margin: 1rem 0;
+    height: 15rem;
+    object-fit: contain;
+    display: block;
 }
 
 .header .shopping-cart .box .fa-trash{

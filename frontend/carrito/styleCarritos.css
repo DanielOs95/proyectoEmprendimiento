@@ -9,7 +9,7 @@
 
 .contenido {
     text-align: center;
-    padding-left: 45%;
+    padding-left: 42%;
     position: absolute;
 }
 
@@ -17,7 +17,6 @@
     padding: 2rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    /*width: 40rem;*/
     background: #fff;
 }
 
@@ -96,11 +95,6 @@
     padding-bottom: 1rem;
 }
 
-/*.contenedorCarrito span{
-    color: var(--light-color);
-    font-size: 1.6rem;
-}*/
-
 .contenedorCarrito .cantidad{
     padding-left: 1rem;
 }
@@ -116,4 +110,12 @@
     display: block;
     text-align: center;
     margin: 1rem;
+}
+
+.imgCarrito {
+    width: 100%;
+    margin: 1rem 0;
+    height: 15rem;
+    object-fit: contain;
+    display: block;
 }

@@ -37,7 +37,7 @@ const mostrarProductos = () => {
         productoMostrar.className = "contenedorCarrito";
 
          productoMostrar.innerHTML = `
-                <img src="${producto.imagen}" alt="">
+                <img src="${producto.imagen}" alt="" class="imgCarrito">
                 <div class="contenido">
                     <h3>${producto.titulo}</h3>
                     <span class="price">${producto.precio}</span>
