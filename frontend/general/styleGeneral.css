@@ -406,6 +406,169 @@ section{
 }
 
 
+
+/*.tarjeta-modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Modal Popup ===== */
+
+.card-modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+}
+
+.card-modal p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card-modal h3 {
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.modal-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); /* Fondo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 40rem;
+    width: 90%;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.tipo-compra {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.tipo-compra button {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    background: none;
+    color: var(--black);
+    transition: all .2s linear;
+}
+
+.tipo-compra button:hover,
+.tipo-compra button.active {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+}
+
+/* Input cantidad o kilo */
+.input-cantidad {
+    margin-bottom: 1.5rem;
+}
+
+.input-cantidad input {
+    width: 50%;
+    padding: 0.8rem 1rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    border: var(--outline);
+    text-align: center;
+}
+
+.botones-modal {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top:15px;
+}
+
+.botones-modal button {
+    padding: 1rem 2rem;
+    font-size: 13px;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    background: none;
+    color: var(--black);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.botones-modal button:hover {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+}
+
+
+.nota-compra {
+    margin-top: 12px;
+    color: red;
+    display: none;
+    font-size: 13px;
+
+}
+
+
+/* Animación suave */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:991px){
     html{
         font-size: 55%;

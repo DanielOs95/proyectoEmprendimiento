@@ -30,6 +30,17 @@ const productosGuardados = () => {
 
 const mostrarProductos = () => {
     contenedor.innerHTML = "";
+
+    if (general.length === 0) {
+        contenedor.innerHTML = `
+            <div class="carrito-vacio">
+                <h2>🛒 Tu carrito está vacío</h2>
+                <p>Agrega productos para iniciar tu compra</p>
+            </div>
+        `;
+
+        return;
+    }
     
     
     general.forEach(producto => {
@@ -40,8 +51,8 @@ const mostrarProductos = () => {
                 <img src="${producto.imagen}" alt="" class="imgCarrito">
                 <div class="contenido">
                     <h3>${producto.titulo}</h3>
-                    <span class="price">${producto.precio}</span>
-                    
+                    <span class="precio"> Precio por kilo: ${producto.precio}</span>
+                    <div class="cantidad-tipo"> cantidad en ${producto.tipo}:</div>
                     <div id="contenedor">
                         <button class="sumar"> + </button>
                         <span class="cantidad">${producto.cantidad}</span>

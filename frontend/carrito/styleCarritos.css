@@ -119,3 +119,29 @@
     object-fit: contain;
     display: block;
 }
+
+
+
+.carrito-vacio {
+    text-align: center;
+    padding: 40px;
+}
+
+.carrito-vacio h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.carrito-vacio p {
+    font-size: 18px;
+    color: #777;
+}
+
+.precio {
+    font-size: 13px;
+}
+
+.cantidad-tipo {
+    margin-top: 10px;
+    font-size: 12px;
+}
