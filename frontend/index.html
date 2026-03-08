@@ -21,7 +21,7 @@
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="#features">Caracteristicas</a>
-            <a href="categorias/categorias.html">Productos</a>
+            <!--<a href="categorias/categorias.html">Productos</a>-->
             <a href="categorias/categorias.html">todas las categorias</a>
             <a href="#review">Reseñas</a>
             <a href="show-blogs">Negocios de comida</a>
@@ -37,22 +37,35 @@
             <div class="fas fa-user" id="login-btn"></div>
         </div>
 
+
+        <form class="search-form">
+
+            <input type="search" id="search-box" class="box" placeholder="Buscar productos..." required>
+
+            <button type="submit" class="fas fa-search search-btn"></button>
+
+        </form>
+
+        
+
+        <!--
         <form action="" class="search-form">
             <input type="search" id="search-box" class="box" placeholder="Buscar Productos...">
             <label for="search-box" class="fas fa-search"></label>
-        </form>
+        </form>-->
         <div class="shopping-cart">
             <!--<div class="box"></div>-->
             <a href="carrito/carrito.html" class="btn ">Ver carrito</a>
         </div>
 
         <form action="" class="login-form">
-            <h3>Unete ahora</h3>
+            <h3>Iniciar sesion</h3>
             <input type="email" class="box" placeholder="your email...">
             <input type="password" class="box" placeholder="your password...">
-            <p>¿Olvidaste tu contraseña? <a href="#">Click aquí</a></p>
-            <p>No tengo una cuenta<a href="#">Crear ahora</a></p>
-            <input type="submit" value="login now" class="btn">
+            <input type="submit" value="Iniciar" class="btn">
+            <p>¿Olvidaste tu contraseña? <a href="login/login.html#recover-form">Click aquí</a></p>
+            <p>No tengo una cuenta <a href="login/login.html#register-form">Crear ahora</a></p>
+            
         </form>
     </header>
 
@@ -421,6 +434,7 @@
 
 <script src="scriptHome.js"></script>
 <script src="general/scriptGeneral.js"></script>
+<script src="general/buscador.js"></script>
 
 </body>
 </html>

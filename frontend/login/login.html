@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Super Expres</title>
+  <!--<link rel="stylesheet" href="/general/styleGeneral.css">-->
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<section class="login-section">
+  <div class="login-container">
+
+    <!-- Nav toggle -->
+    <div class="form-toggle">
+      <button id="btn-login" class="active">Login</button>
+      <button id="btn-register">Registro</button>
+      <button id="btn-recover">Recuperar</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form id="login-form" class="active">
+      <h2>Iniciar Sesión</h2>
+      <input type="email" id="login-email" placeholder="Correo electrónico" required>
+      <input type="password" id="login-password" placeholder="Contraseña" required>
+      <button type="submit" class="btn">Entrar</button>
+      <p class="mensaje-error" id="login-error"></p>
+    </form>
+
+    <!-- REGISTRO -->
+    <form id="register-form">
+      <h2>Registro</h2>
+      <input type="text" id="reg-nombre" placeholder="Nombre completo" required>
+      <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+      <input type="password" id="reg-password" placeholder="Contraseña" required>
+      <button type="submit" class="btn">Registrarse</button>
+      <p class="mensaje-error" id="register-error"></p>
+      <p class="mensaje-exito" id="register-success"></p>
+    </form>
+
+    <!-- RECUPERAR CONTRASEÑA -->
+    <form id="recover-form">
+      <h2>Recuperar Contraseña</h2>
+      <input type="email" id="recover-email" placeholder="Correo electrónico" required>
+      <button type="submit" class="btn">Enviar</button>
+      <p class="mensaje-error" id="recover-error"></p>
+      <p class="mensaje-exito" id="recover-success"></p>
+    </form>
+
+  </div>
+</section>
+
+<script type="module" src="login.js"></script>
+</body>
+</html>

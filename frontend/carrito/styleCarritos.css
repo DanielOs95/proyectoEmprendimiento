@@ -145,3 +145,57 @@
     margin-top: 10px;
     font-size: 12px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+#resumen-compra{
+    margin-top:40px;
+    padding:20px;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:var(--box-shadow);
+}
+
+#resumen-compra h2{
+    margin-bottom:15px;
+}
+
+.linea{
+    display:flex;
+    justify-content:space-between;
+    margin:8px 0;
+    font-size:16px;
+}
+
+.total{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.metodos-pago{
+    margin-top:20px;
+}
+
+.btn-pago{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background:var(--orange);
+    color:white;
+    cursor:pointer;
+}
+
+.btn-pago.tarjeta{
+    background:#555;
+}

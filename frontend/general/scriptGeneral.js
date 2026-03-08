@@ -145,8 +145,8 @@ function mostrarModal(producto, opciones = ["kilo","pieza","pesos"]) {
         carritoGeneral.push({
             imagen: producto.imagen,
             titulo: producto.titulo,
-            precio: precioFinal.toFixed(2),
-            cantidad: cantidad,
+            precio: tipoSeleccionado === "pesos" ? precioFinal.toFixed(2) : precioBase.toFixed(2),
+            cantidad: tipoSeleccionado === "pesos" ? 1 : cantidad,
             tipo: tipoSeleccionado
         });
 
@@ -236,3 +236,20 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarCarrito();
     cargarProductosEnHeader();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

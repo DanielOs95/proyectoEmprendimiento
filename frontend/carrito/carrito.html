@@ -18,7 +18,7 @@
         <nav class="navbar">
             <a href="/index.html">Home</a>
             <a href="/index.html#features">Caracteristicas</a>
-            <a href="/productos/productos.html">Productos</a>
+            <!--<a href="/productos/productos.html">Productos</a>-->
             <a href="/index.html#categories">Categorias</a>
             <a href="show-review">Reseñas</a>
             <a href="show-blogs">Blogs</a>
@@ -55,8 +55,46 @@
     <!--SECCION DE CARRITO--> 
 <section id="carrito">
     <h1 class="heading">Carrito de <span>compras</span></h1>
-    <div id="contenedor-carrito">
+    <div id="contenedor-carrito"></div>
+    <div id="resumen-compra">
+
+    <h2>Resumen del pedido</h2>
+
+    <div class="linea">
+        <span>Subtotal:</span>
+        <span id="subtotal">$0</span>
     </div>
+
+    <div class="linea">
+        <span>IVA (16%):</span>
+        <span id="iva">$0</span>
+    </div>
+
+    <div class="linea">
+        <span>Envío:</span>
+        <span id="envio">$35</span>
+    </div>
+
+    <div class="linea total">
+        <span>Total:</span>
+        <span id="total">$0</span>
+    </div>
+
+    <div class="metodos-pago">
+
+        <h3>Método de pago</h3>
+
+        <button id="pago-efectivo" class="btn-pago">
+            Pagar contra entrega
+        </button>
+
+        <button id="pago-tarjeta" class="btn-pago tarjeta">
+            Tarjeta (próximamente)
+        </button>
+
+    </div>
+
+</div>
 </section>
 
 
